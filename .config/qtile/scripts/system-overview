@@ -140,31 +140,31 @@ conky.text = [[
 #${image ~/.config/conky/images/arcolinux-white-100x100.png -p 170,0 -s 50x50}
 #${color1}${font SourceSansPro-ExtraLight:size=18:weight:bold}${color2}${execi 6000 lsb_release -d | grep 'Descr'|awk {'print $2 " " $3" " $4" " $5'}}
 ${color1}${hr 2}
-${voffset -10}${color1}${font SourceSansPro-ExtraLight:size=10:weight:bold:italic}${color8}$sysname $kernel ${alignr}${execi 6000 lsb_release -a | grep 'Release'|awk {'print $2""$3""$4""$5'}}${color}
-${color1}${font SourceSansPro-ExtraLight:size=12:weight:bold}Uptime ${alignr}${color8} $uptime
+${voffset -10}${color1}${font SourceSansPro-ExtraLight:size=10:weight:bold:italic}${color9}$sysname $kernel ${alignr}${execi 6000 lsb_release -a | grep 'Release'|awk {'print $2""$3""$4""$5'}}${color}
+${color1}${font SourceSansPro-ExtraLight:size=12:weight:bold}Uptime ${alignr}${color9} $uptime
 #${color1}${font SourceSansPro-ExtraLight:size=12:weight:bold}Cpu Temp ${alignr}${color6}${execi 10 sensors | grep 'Core 0' | awk {'print $3'}}
 #${color1}${color1}Cpu Freq ${alignr}${color6}${freq_g} Ghz
-${color1}${cpubar cpu0 10,150}${color1} Cpu ${alignr}${if_match ${cpu cpu0} > 80}${color9}${else}${if_match ${cpu cpu0} > 50}${color8}${else}${color8}${endif}${endif}${cpu cpu0}%
-${color1}${cpubar cpu1 10,150}${color1} Cpu ${alignr}${if_match ${cpu cpu1} > 80}${color9}${else}${if_match ${cpu cpu1} > 50}${color8}${else}${color8}${endif}${endif}${cpu cpu1}%
+${color1}${cpubar cpu0 10,150}${color1} Cpu ${alignr}${if_match ${cpu cpu0} > 80}${color9}${else}${if_match ${cpu cpu0} > 50}${color9}${else}${color9}${endif}${endif}${cpu cpu0}%
+${color1}${cpubar cpu1 10,150}${color1} Cpu ${alignr}${if_match ${cpu cpu1} > 80}${color9}${else}${if_match ${cpu cpu1} > 50}${color9}${else}${color9}${endif}${endif}${cpu cpu1}%
 ${if_existing /proc/acpi/battery/BAT0/info}${if_match ${battery_percent BAT0} <= 20}${color3}${battery_bar 10,150 BAT0} Battery${alignr}${color7}${battery_percent BAT0}%${else}${color1}${battery_bar 10,150 BAT0} Battery${alignr}${color1}${battery_percent BAT0}%${endif}${else}${voffset -20}${endif}
-${color1}${membar 10,150} Mem ${alignr}${if_match ${memperc} > 80}${color9}${else}${color8}${endif}${color8}${memperc}%
-${color1}${fs_bar 10,120}${alignr}${color8}${fs_free}${color} of${color8} ${fs_size}${color}
-${color1}Total Processes${alignr}${color8}${processes}
-${color1}Packages Upgrades${alignr}${color8}${execi 3600 checkupdates | wc -l} 
+${color1}${membar 10,150} Mem ${alignr}${if_match ${memperc} > 80}${color9}${else}${color9}${endif}${color9}${memperc}%
+${color1}${fs_bar 10,120}${alignr}${color9}${fs_free}${color} of${color9} ${fs_size}${color}
+${color1}Total Processes${alignr}${color9}${processes}
+${color1}Packages Upgrades${alignr}${color9}${execi 3600 checkupdates | wc -l} 
 ${color1}${hr 2}
 ${font SourceSansPro-ExtraLight size=12:weight:bold}${color1}Cpu
 #${font SourceSansPro-ExtraLight size=8:weight:italic}${color6}${execi 6000 cat /proc/cpuinfo | grep -i 'Model name' -m 1 | cut -c14-43}${font}
-${offset 30}${font SourceSansPro-ExtraLight:size=12:weight:bold}${color4}${top name 1}${alignr}${color8}${top cpu 1}%${font}
-${offset 30}${color1}${top name 2}${alignr}${color8}${top cpu 2}%
-${offset 30}${color1}${top name 3}${alignr}${color8}${top cpu 3}%
-${offset 30}${color1}${top name 4}${alignr}${color8}${top cpu 4}%
+${offset 30}${font SourceSansPro-ExtraLight:size=12:weight:bold}${color4}${top name 1}${alignr}${color9}${top cpu 1}%${font}
+${offset 30}${color1}${top name 2}${alignr}${color9}${top cpu 2}%
+${offset 30}${color1}${top name 3}${alignr}${color9}${top cpu 3}%
+${offset 30}${color1}${top name 4}${alignr}${color9}${top cpu 4}%
 ${color5}${font SourceSansPro-ExtraLight:size=12:weight:bold}Memory
-${offset 30}${font SourceSansPro-ExtraLight:size=12:weight:bold}${color4}${top_mem name 1}${alignr}${alignr}${color8}${top_mem mem 1}${font}
-${offset 30}${color1}${top_mem name 2}${alignr}${alignr}${color8}${top_mem mem 2}
-${offset 30}${color1}${top_mem name 3}${alignr}${alignr}${color8}${top_mem mem 3}
-${offset 30}${color1}${top_mem name 4}${alignr}${alignr}${color8}${top_mem mem 4}
-${offset 0}${color1}${color1}Memory perc${alignr}${color8}${memperc}%
-${offset 0}${color1}Total Memory${alignr}${color8}${memmax}
+${offset 30}${font SourceSansPro-ExtraLight:size=12:weight:bold}${color4}${top_mem name 1}${alignr}${alignr}${color9}${top_mem mem 1}${font}
+${offset 30}${color1}${top_mem name 2}${alignr}${alignr}${color9}${top_mem mem 2}
+${offset 30}${color1}${top_mem name 3}${alignr}${alignr}${color9}${top_mem mem 3}
+${offset 30}${color1}${top_mem name 4}${alignr}${alignr}${color9}${top_mem mem 4}
+${offset 0}${color1}${color1}Memory perc${alignr}${color9}${memperc}%
+${offset 0}${color1}Total Memory${alignr}${color9}${memmax}
 ${color1}${hr 2}
 ${color1}${alignc}A T A J O S   de   T E C L A D O${color}
 ${color1}${hr}${color}
