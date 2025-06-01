@@ -38,6 +38,7 @@ keys = [
     Key([mod], "m", lazy.spawn("rofi -show run"), desc="Launch rofi"),
     Key([mod], "f", lazy.spawn("firefox"), desc="Launch firefox"),
     Key([mod], "c", lazy.spawn("code"), desc="Launch code"),
+    Key([mod], "Return", lazy.spawn("alacritty")),
 
     # Volumen
     Key([], "XF86AudioLowerVolume", lazy.spawn("pamixer --decrease 5")),
