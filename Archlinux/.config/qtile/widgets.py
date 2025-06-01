@@ -92,17 +92,24 @@ primary_widgets = [
 
     icon(bg="color3", text=' '),  # Icon: nf-fa-feed
     
-    widget.Net(**base(bg='color3'), interface='wlo1'),
+    widget.Net(
+        **base(bg='color3'), 
+        interface='wlo1',
+        format='{down:6.2f}{down_suffix:<2}↓↑{up:6.2f}{up_suffix:<2}'
+    ),
 
-    powerline('color2', 'color3'),
+    powerline('color3', 'color1'),
 
-    icon(bg="color1", text=''), # Icon: nf-md-calendar
+    icon(bg="color1", text=' '), # Icon: nf-md-calendar
 
-    widget.Clock(**base(bg='color1'), format='%d/%m/%y - %H:%M'),
+    widget.Clock(
+        **base(bg='color1'), 
+        format='%d/%m/%y - %H:%M'
+    ),
 
     powerline('color1', 'color2'),
 
-    icon(bg="color2", text=''), # Icon: nf-fa-volume_high
+    icon(bg="color2", text=' '), # Icon: nf-fa-volume_high
 
     widget.Volume(
         foreground=colors['dark'],
@@ -110,9 +117,52 @@ primary_widgets = [
         channel='Headset',
     ),
 
-    powerline('dark', 'color2'),
+    powerline('color1', 'color4'),
+
+    icon(bg="color4", text='󰈸 '), # Icon: nf-md-fire
+
+    widget.NvidiaSensors(
+        foreground=colors['dark'],
+        background=colors['color4'],
+        threshold=60, 
+        foreground_alert='ff6000',
+    ),
+
+    powerline('color3', 'color4'),
+
+    icon(bg="color3", text='󰻠 '),  # Icon: nf-fmd-cpu_64_bit
+    
+    widget.CPU(
+        foreground=colors['dark'],
+        background=colors['color3'],
+        format='{load_percent}%',
+    ),
+
+    powerline('color3', 'color1'),
+
+    icon(bg="color1", text=' '), # Icon: nf-fa-hdd_o
+
+    widget.HDD(
+        foreground=colors['dark'],
+        background=colors['color1'],
+        format='{HDDPercent}%',
+        device='nvme0n1',
+    ),
+
+    powerline('color1', 'color1'),
 
     widget.Systray(background=colors['dark'], padding=5),
+
+    powerline('dark', 'color2'),
+
+    icon(bg="color2", text='󰿅  '), # Icon: nf-md-location_exit
+    
+    widget.QuickExit(
+        foreground=colors['dark'],
+        background=colors['color2'],
+        default_text='Salir',
+    ),
+    
 ]
 
 secondary_widgets = [
