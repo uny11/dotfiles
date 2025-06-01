@@ -6,7 +6,7 @@
 
 from libqtile.config import Key, Group
 from libqtile.lazy import lazy
-from .keys import mod, keys
+from teclas import mod, keys
 
 
 # Get the icons at https://www.nerdfonts.com/cheat-sheet (you need a Nerd Font)
