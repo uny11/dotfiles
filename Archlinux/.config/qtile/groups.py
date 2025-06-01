@@ -16,12 +16,9 @@ from teclas import mod, keys
 # nf-dev-terminal, 
 # nf-fa-code, 
 # nf-oct-git_merge, 
-# nf-linux-docker,
-# nf-mdi-image, 
-# nf-mdi-layers
 
 groups = [Group(i) for i in [
-    "   ", "   ", "   ", "   ", "  ", "   ", "   ", "   ", "   ",
+    "   ", "   ", "   ", "   ", "  ",
 ]]
 
 for i, group in enumerate(groups):
