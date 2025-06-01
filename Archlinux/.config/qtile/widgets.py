@@ -109,7 +109,7 @@ primary_widgets = [
 ]
 
 secondary_widgets = [
-    *º1workspaces(),
+    *workspaces(),
 
     separator(),
 
