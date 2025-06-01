@@ -8,13 +8,13 @@
 
 from libqtile import hook
 
-from settings.keys import mod, keys
-from settings.groups import groups
-from settings.layouts import layouts, floating_layout
-from settings.widgets import widget_defaults, extension_defaults
-from settings.screens import screens
-from settings.mouse import mouse
-from settings.path import qtile_path
+from teclas import mod, keys
+from groups import groups
+from layouts import layouts, floating_layout
+from widgets import widget_defaults, extension_defaults
+#from settings.screens import screens
+from mouse import mouse
+from path import qtile_path
 
 from os import path
 import subprocess
