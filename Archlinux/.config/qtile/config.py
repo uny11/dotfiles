@@ -12,7 +12,7 @@ from teclas import mod, keys
 from groups import groups
 from layouts import layouts, floating_layout
 from widgets import widget_defaults, extension_defaults
-#from settings.screens import screens
+from screens import screens
 from mouse import mouse
 from path import qtile_path
 
@@ -33,5 +33,5 @@ bring_front_click = False
 cursor_warp = True
 auto_fullscreen = True
 focus_on_window_activation = 'urgent'
-wmname = 'LG3D'
+wmname = 'Qtile'
 
