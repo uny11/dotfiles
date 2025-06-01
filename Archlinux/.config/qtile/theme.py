@@ -26,5 +26,5 @@ def load_theme():
         return json.load(f)
 
 
-if __name__ == "settings.theme":
+if __name__ == "theme":
     colors = load_theme()
