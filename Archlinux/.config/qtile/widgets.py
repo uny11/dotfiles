@@ -89,7 +89,7 @@ primary_widgets = [
 
     icon(bg="color3", text=' '),  # Icon: nf-fa-feed
     
-    widget.Net(**base(bg='color3'), interface='wlp2s0'),
+    widget.Net(**base(bg='color3'), interface='wlo1'),
 
     powerline('color2', 'color3'),
 
@@ -109,7 +109,7 @@ primary_widgets = [
 ]
 
 secondary_widgets = [
-    *workspaces(),
+    *º1workspaces(),
 
     separator(),
 
@@ -126,10 +126,10 @@ secondary_widgets = [
     powerline('dark', 'color2'),
 ]
 
-widget_defaults = {
-    'font': 'UbuntuMono Nerd Font Bold',
-    'fontsize': 14,
-    'padding': 1,
-}
+widget_defaults = dict(
+    font="UbuntuMono Nerd Font",
+    fontsize=16,
+    padding=3,
+)
 
 extension_defaults = widget_defaults.copy()
