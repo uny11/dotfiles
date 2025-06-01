@@ -61,8 +61,11 @@ def workspaces():
             disable_drag=True
         ),
         separator(),
-        widget.WindowName(**base(fg='focus'), fontsize=14, padding=5),
+        widget.CurrentLayoutIcon(**base(bg='color2'), scale=0.65),
+        widget.CurrentLayout(**base(bg='color2'), padding=5),
         separator(),
+        widget.WindowName(**base(fg='focus'), fontsize=14, padding=5),
+        separator(),        
     ]
 
 
@@ -93,17 +96,21 @@ primary_widgets = [
 
     powerline('color2', 'color3'),
 
-    widget.CurrentLayoutIcon(**base(bg='color2'), scale=0.65),
+    icon(bg="color1", text=''), # Icon: nf-md-calendar
 
-    widget.CurrentLayout(**base(bg='color2'), padding=5),
+    widget.Clock(**base(bg='color1'), format='%d/%m/%y - %H:%M'),
 
     powerline('color1', 'color2'),
 
-    icon(bg="color1", fontsize=17, text=' '), # Icon: nf-mdi-calendar_clock
+    icon(bg="color2", text=''), # Icon: nf-fa-volume_high
 
-    widget.Clock(**base(bg='color1'), format='%d/%m/%Y - %H:%M '),
+    widget.Volume(
+        foreground=colors['dark'],
+        background=colors['color2'],
+        channel='Headset',
+    ),
 
-    powerline('dark', 'color1'),
+    powerline('dark', 'color2'),
 
     widget.Systray(background=colors['dark'], padding=5),
 ]
