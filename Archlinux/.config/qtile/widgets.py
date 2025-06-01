@@ -98,7 +98,7 @@ primary_widgets = [
         format='{down:6.2f}{down_suffix:<2}↓↑{up:6.2f}{up_suffix:<2}'
     ),
 
-    powerline('color3', 'color1'),
+    powerline('color2', 'color3'),
 
     icon(bg="color1", text=' '), # Icon: nf-md-calendar
 
@@ -107,17 +107,17 @@ primary_widgets = [
         format='%d/%m/%y - %H:%M'
     ),
 
-    powerline('color1', 'color2'),
+    powerline('color2', 'color1'),
 
     icon(bg="color2", text=' '), # Icon: nf-fa-volume_high
 
     widget.Volume(
         foreground=colors['dark'],
         background=colors['color2'],
-        channel='Headset',
+        channel='Master',
     ),
 
-    powerline('color1', 'color4'),
+    powerline('color4', 'color2'),
 
     icon(bg="color4", text='󰈸 '), # Icon: nf-md-fire
 
@@ -138,7 +138,7 @@ primary_widgets = [
         format='{load_percent}%',
     ),
 
-    powerline('color3', 'color1'),
+    powerline('color2', 'color3'),
 
     icon(bg="color1", text=' '), # Icon: nf-fa-hdd_o
 
@@ -146,14 +146,14 @@ primary_widgets = [
         foreground=colors['dark'],
         background=colors['color1'],
         format='{HDDPercent}%',
-        device='nvme0n1',
+        device='nvme1n1',
     ),
 
-    powerline('color1', 'color1'),
+    powerline('dark', 'color1'),
 
     widget.Systray(background=colors['dark'], padding=5),
 
-    powerline('dark', 'color2'),
+    powerline('color2', 'dark'),
 
     icon(bg="color2", text='󰿅  '), # Icon: nf-md-location_exit
     
