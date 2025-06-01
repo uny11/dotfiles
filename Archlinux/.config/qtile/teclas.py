@@ -41,8 +41,8 @@ keys = [
     Key([mod], "Return", lazy.spawn("alacritty")),
 
     # Volumen
-    Key([], "XF86AudioLowerVolume", lazy.spawn("pamixer --decrease 5")),
-    Key([], "XF86AudioRaiseVolume", lazy.spawn("pamixer --increase 5")),
-    Key([], "XF86AudioMute", lazy.spawn("pamixer --toggle-mute")),
+    Key([], "XF86AudioLowerVolume", lazy.spawn("amixer set Headset 5%-")),
+    Key([], "XF86AudioRaiseVolume", lazy.spawn("amixer set Headset 5%+")),
+    Key([], "XF86AudioMute", lazy.spawn("amixer sset PCM unmute")),
     
     ]
