@@ -1,0 +1,82 @@
+    70.4ms (setup:1108): 2025-06-03 22:43:36
+    70.5ms (setup:1109): /usr/bin/pipx install schedule
+    70.5ms (setup:1110): pipx version is 1.7.1
+    70.5ms (setup:1111): Default python interpreter is '/usr/bin/python3.13'
+    70.6ms (mkdir:76): creating directory /home/isaac/.local/share/pipx/venvs
+    70.6ms (mkdir:76): creating directory /home/isaac/.local/bin
+    70.7ms (mkdir:76): creating directory /home/isaac/.local/share/man
+    70.7ms (mkdir:76): creating directory /home/isaac/.cache/pipx
+    70.7ms (mkdir:76): creating directory /home/isaac/.local/share/pipx/py
+    70.8ms (setup:1125): Adding CACHEDIR.TAG to cache directory
+    70.8ms (setup:1125): Adding CACHEDIR.TAG to cache directory
+    71.3ms (package_name_from_spec:378): Determined package name: schedule
+    71.3ms (package_name_from_spec:379): Package name determined in 0.0s
+    71.4ms (create_venv:164): Creating virtual environment
+    71.7ms (run_subprocess:175): running /usr/bin/python3.13 -m venv --without-pip /home/isaac/.local/share/pipx/venvs/schedule
+   101.7ms (run_subprocess:195): stdout:
+   101.7ms (run_subprocess:197): stderr:
+   101.7ms (run_subprocess:198): returncode: 0
+   102.3ms (run_subprocess:175): running /usr/bin/python3.13 -m venv --clear /home/isaac/.local/share/pipx/shared
+  1449.6ms (run_subprocess:195): stdout:
+  1449.7ms (run_subprocess:197): stderr:
+  1449.7ms (run_subprocess:198): returncode: 0
+  1449.9ms (run_subprocess:175): running <checking pip's availability>
+  1459.6ms (run_subprocess:195): stdout: ModuleSpec(name='pip', loader=<_frozen_importlib_external.SourceFileLoader object at 0x7fc1a26608d0>, origin='/home/isaac/.local/share/pipx/shared/lib/python3.13/site-packages/pip/__init__.py', submodule_search_locations=['/home/isaac/.local/share/pipx/shared/lib/python3.13/site-packages/pip'])
+  1459.6ms (run_subprocess:198): returncode: 0
+  1459.8ms (upgrade:119): Upgrading shared libraries in /home/isaac/.local/share/pipx/shared
+  1460.1ms (run_subprocess:175): running /home/isaac/.local/share/pipx/shared/bin/python -m pip --no-input --disable-pip-version-check install --force-reinstall -q --upgrade pip >= 23.1
+  2570.9ms (run_subprocess:195): stdout:
+  2570.9ms (run_subprocess:197): stderr:
+  2570.9ms (run_subprocess:198): returncode: 0
+  2571.1ms (run_subprocess:175): running /home/isaac/.local/share/pipx/venvs/schedule/bin/python -c import sysconfig; print(sysconfig.get_path('purelib'))
+  2582.6ms (run_subprocess:195): stdout: /home/isaac/.local/share/pipx/venvs/schedule/lib/python3.13/site-packages
+  2582.6ms (run_subprocess:198): returncode: 0
+  2582.8ms (run_subprocess:175): running /home/isaac/.local/share/pipx/shared/bin/python -c import sysconfig; print(sysconfig.get_path('purelib'))
+  2593.8ms (run_subprocess:195): stdout: /home/isaac/.local/share/pipx/shared/lib/python3.13/site-packages
+  2593.9ms (run_subprocess:198): returncode: 0
+  2594.1ms (run_subprocess:175): running /home/isaac/.local/share/pipx/venvs/schedule/bin/python --version
+  2595.7ms (run_subprocess:195): stdout: Python 3.13.3
+  2595.7ms (run_subprocess:197): stderr:
+  2595.7ms (run_subprocess:198): returncode: 0
+  2595.9ms (_parsed_package_to_package_or_url:139): cleaned package spec: schedule
+  2595.9ms (install_package:247): Installing schedule
+  2596.1ms (run_subprocess:175): running /home/isaac/.local/share/pipx/venvs/schedule/bin/python -m pip --no-input install schedule
+  3037.0ms (run_subprocess:198): returncode: 0
+  3037.4ms (run_subprocess:175): running <fetch_info_in_venv commands>
+  3053.0ms (run_subprocess:195): stdout: {"sys_path": ["/usr/lib/python313.zip", "/usr/lib/python3.13", "/usr/lib/python3.13/lib-dynload", "/home/isaac/.local/share/pipx/venvs/schedule/lib/python3.13/site-packages", "/home/isaac/.local/share/pipx/shared/lib/python3.13/site-packages"], "python_version": "3.13.3", "environment": {"implementation_name": "cpython", "implementation_version": "3.13.3", "os_name": "posix", "platform_machine": "x86_64", "platform_release": "6.14.7-arch2-1", "platform_system": "Linux", "platform_version": "#1 SMP PREEMPT_DYNAMIC Thu, 22 May 2025 05:37:49 +0000", "python_full_version": "3.13.3", "platform_python_implementation": "CPython", "python_version": "3.13", "sys_platform": "linux"}}
+  3053.0ms (run_subprocess:198): returncode: 0
+  3055.3ms (get_venv_metadata_for_package:351): get_venv_metadata_for_package: 18ms
+  3055.3ms (_parsed_package_to_package_or_url:139): cleaned package spec: schedule
+  3055.5ms (rmdir:56): removing directory /home/isaac/.local/share/pipx/venvs/schedule
+  3055.9ms (cli:1179): PipxError: No apps associated with package schedule or its dependencies. If you are attempting to install a library, pipx should
+not be used. Consider using pip or a similar tool instead.
+Traceback (most recent call last):
+  File "/usr/lib/python3.13/site-packages/pipx/main.py", line 1176, in cli
+    return run_pipx_command(parsed_pipx_args, subparsers)
+  File "/usr/lib/python3.13/site-packages/pipx/main.py", line 282, in run_pipx_command
+    return commands.install(
+           ~~~~~~~~~~~~~~~~^
+        None,
+        ^^^^^
+    ...<13 lines>...
+        python_flag_passed=python_flag_passed,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/usr/lib/python3.13/site-packages/pipx/commands/install.py", line 108, in install
+    run_post_install_actions(
+    ~~~~~~~~~~~~~~~~~~~~~~~~^
+        venv,
+        ^^^^^
+    ...<5 lines>...
+        force=force,
+        ^^^^^^^^^^^^
+    )
+    ^
+  File "/usr/lib/python3.13/site-packages/pipx/commands/common.py", line 418, in run_post_install_actions
+    raise PipxError(
+    ...<5 lines>...
+    )
+pipx.util.PipxError: No apps associated with package schedule or its dependencies. If you are attempting to install a library, pipx should
+not be used. Consider using pip or a similar tool instead.
+  3056.8ms (cli:1187): pipx finished.

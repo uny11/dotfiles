@@ -1,0 +1,7 @@
+setxkbmap es
+nitrogen --restore
+picom -f &
+nm-applet &
+udiskie -t &
+volumeicon &
+conky &

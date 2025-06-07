@@ -1,0 +1,28 @@
+#
+# ~/.bashrc
+#
+
+# If not running interactively, don't do anything
+[[ $- != *i* ]] && return
+
+alias ls='ls --color=auto'
+alias grep='grep --color=auto'
+
+#PS1='[\u@\h \W]\$ '
+# R='\[\e[38;2;255;100;100m\]'                                                                                                            
+# G='\[\e[38;2;100;255;100m\]'
+# B='\[\e[38;2;100;100;255m\]'
+# W='\[\e[0m\]'
+# PS1="[$R\u$W@$B\h$W:$G\w$W]\$ "
+
+CYAN="\[\e[01;36m\]"
+WHITE="\[\e[01;37m\]"
+CYAN="\[\e[01;36m\]"
+TEXT_RESET="\[\e[00m\]"   
+TIME="\t"
+USER="\u"
+CURRENT_PATH="\W"
+ROOT_OR_NOT="\$"
+PS1="${CYAN}[${CYAN}${TIME} ${USER}${WHITE} ${CURRENT_PATH}${CYAN}]${ROOT_OR_NOT}${TEXT_RESET} "
+
+screenfetch

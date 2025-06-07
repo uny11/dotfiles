@@ -1,0 +1,5 @@
+[user]
+	email = isaac.porta@gmail.com
+	name = uny11
+[core]
+	sshCommnand = ~/.ssh/id_ed25519
