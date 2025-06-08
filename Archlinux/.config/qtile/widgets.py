@@ -107,17 +107,7 @@ primary_widgets = [
         format='%d/%m/%y - %H:%M'
     ),
 
-    powerline('color2', 'color1'),
-
-    icon(bg="color2", text=' '), # Icon: nf-fa-volume_high
-
-    widget.Volume(
-        foreground=colors['dark'],
-        background=colors['color2'],
-        channel='Master',
-    ),
-
-    powerline('color4', 'color2'),
+    powerline('color4', 'color4'),
 
     icon(bg="color4", text='󰈸 '), # Icon: nf-md-fire
 
@@ -174,13 +164,35 @@ secondary_widgets = [
 
     widget.CurrentLayoutIcon(**base(bg='color1'), scale=0.65),
 
-    widget.CurrentLayout(**base(bg='color1'), padding=5),
+    #widget.CurrentLayout(**base(bg='color1'), padding=5),
 
     powerline('color2', 'color1'),
 
-    widget.Clock(**base(bg='color2'), format='%d/%m/%Y - %H:%M '),
+    icon(bg="color2", text=' '), # Icon: nf-fa-volume_high
 
-    powerline('dark', 'color2'),
+    widget.Volume(
+        foreground=colors['dark'],
+        background=colors['color2'],
+        channel='Headset',
+    ),
+
+    powerline('color4', 'color4'),
+
+    icon(bg="color4", text=' '), # Icon: nf-fa-volume_high
+
+    widget.Volume(
+        foreground=colors['dark'],
+        background=colors['color4'],
+        channel='Master',
+    ),
+
+    powerline('color1', 'color1'),
+
+    icon(bg="color1", text=' '), # Icon: nf-md-calendar
+
+    widget.Clock(**base(bg='color1'), format='%d/%m/%Y - %H:%M '),
+
+    powerline('dark', 'color1'),
 ]
 
 widget_defaults = dict(
