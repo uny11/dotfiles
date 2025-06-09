@@ -16,10 +16,10 @@ layout_conf = {
 
 layouts = [
     
-    layout.Columns(),
-    layout.TreeTab(),
     layout.MonadTall(**layout_conf),
     layout.MonadWide(**layout_conf),
+    layout.Columns(),
+    layout.TreeTab(),    
     #layout.Bsp(**layout_conf),
     #layout.Matrix(columns=2, **layout_conf),
     #layout.RatioTile(**layout_conf),

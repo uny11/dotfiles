@@ -1,8 +1,0 @@
-[Default Applications]
-application/gzip=userapp-unzip-VROB72.desktop
-font/otf=firefox.desktop
-
-[Added Associations]
-application/gzip=userapp-unzip-VROB72.desktop;
-application/toml=code-oss.desktop;
-font/otf=firefox.desktop;

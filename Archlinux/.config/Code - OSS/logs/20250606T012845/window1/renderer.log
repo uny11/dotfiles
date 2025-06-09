@@ -1,8 +1,0 @@
-2025-06-06 01:28:46.341 [info] Started local extension host with pid 86774.
-2025-06-06 01:28:46.404 [info] ComputeTargetPlatform: linux-x64
-2025-06-06 01:28:46.516 [error] Extension 'ms-python.debugpy CANNOT USE these API proposals 'portsAttributes, debugVisualization, contribViewsWelcome'. You MUST start in extension development mode or use the --enable-proposed-api command line flag
-2025-06-06 01:28:46.516 [error] Extension 'ms-python.python CANNOT USE these API proposals 'contribEditorContentMenu, quickPickSortByLabel, testObserver, quickPickItemTooltip, terminalDataWriteEvent, terminalExecuteCommandEvent, codeActionAI, notebookReplDocument, notebookVariableProvider'. You MUST start in extension development mode or use the --enable-proposed-api command line flag
-2025-06-06 01:28:46.534 [error] [ms-python.python]: editor/content es un identificador de menú propuesto. Requiere "package.json#enabledApiProposals: ["contribEditorContentMenu"]' y solo está disponible cuando se queda sin desarrollo o con el siguiente modificador de línea de comandos: --enable-proposed-api ms-python.python
-2025-06-06 01:28:46.787 [error] [EricSia.pythonsnippets3]: Lenguaje desconocido en "contributes.pythonsnippets3.language". Valor proporcionado: django-html
-2025-06-06 01:28:46.787 [error] [EricSia.pythonsnippets3]: Lenguaje desconocido en "contributes.pythonsnippets3.language". Valor proporcionado: django-txt
-2025-06-06 01:28:49.003 [info] [perf] Render performance baseline is 18ms

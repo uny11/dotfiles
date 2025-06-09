@@ -137,6 +137,6 @@ bindkey "\e[F"	end-of-line
 bindkey "\e[3~"	delete-char
 
 #basico
-#screenfetch
+screenfetch
 #rojo con letra lila
-screenfetch -c 1,4
+#screenfetch -c 7,6

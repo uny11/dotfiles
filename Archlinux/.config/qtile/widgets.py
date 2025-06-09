@@ -188,11 +188,11 @@ secondary_widgets = [
 
     powerline('color1', 'color4'),
 
-    icon(bg="color1", text=' '), # Icon: nf-md-calendar
+    icon(bg="color3", text=' '), # Icon: nf-md-calendar
 
-    widget.Clock(**base(bg='color1'), format='%d/%m/%Y - %H:%M '),
+    widget.Clock(**base(bg='color3'), format='%d/%m/%Y - %H:%M '),
 
-    powerline('color1', 'color1'),
+    #powerline('color3', 'color3'),
 ]
 
 widget_defaults = dict(

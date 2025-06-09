@@ -37,6 +37,7 @@ keys = [
     #Apps
     Key([mod], "m", lazy.spawn("rofi -show run"), desc="Launch rofi"),
     Key([mod], "f", lazy.spawn("firefox"), desc="Launch firefox"),
+    Key([mod], "b", lazy.spawn("brave"), desc="Launch Brave"),
     Key([mod], "c", lazy.spawn("code"), desc="Launch code"),
     Key([mod], "Return", lazy.spawn("alacritty")),
 
