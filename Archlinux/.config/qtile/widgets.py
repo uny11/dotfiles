@@ -70,6 +70,14 @@ def workspaces():
 
 
 primary_widgets = [
+
+    # widget.Image(
+    #     filename = '/home/isaac/Wallpapers/archlinux-logo-dark-1200dpi.png',
+    #     background = 'ffffff'
+    # ),
+
+#    separator(),
+
     *workspaces(),
 
     separator(),
@@ -90,21 +98,31 @@ primary_widgets = [
 
     powerline('color3', 'color4'),
 
-    icon(bg="color3", text=' '),  # Icon: nf-fa-feed
+    # icon(bg="color3", text=' '),  # Icon: nf-fa-feed
     
-    widget.Net(
-        **base(bg='color3'), 
-        interface='wlo1',
-        format='{down:6.2f}{down_suffix:<2}↓↑{up:6.2f}{up_suffix:<2}'
+    # widget.Net(
+    #     **base(bg='color3'), 
+    #     interface='wlo1',
+    #     format='{down:6.2f}{down_suffix:<2}↓↑{up:6.2f}{up_suffix:<2}'
+    # ),
+
+    icon(bg="color3", text='󰍛 '),  # Icon: nf-md-memory
+
+    widget.Memory(
+        foreground=colors['dark'],
+        background=colors['color3'],
+        measure_mem='M',       
     ),
 
     powerline('color1', 'color3'),
 
-    icon(bg="color1", text=' '), # Icon: nf-md-calendar
+    icon(bg="color1", text=' '), # Icon: nf-fa-hdd_o
 
-    widget.Clock(
-        **base(bg='color1'), 
-        format='%d/%m/%y - %H:%M'
+    widget.HDD(
+        foreground=colors['dark'],
+        background=colors['color1'],
+        format='{HDDPercent}%',
+        device='nvme0n1',
     ),
 
     powerline('color4', 'color1'),
@@ -130,13 +148,11 @@ primary_widgets = [
 
     powerline('color1', 'color3'),
 
-    icon(bg="color1", text=' '), # Icon: nf-fa-hdd_o
+    icon(bg="color1", text=' '), # Icon: nf-md-calendar
 
-    widget.HDD(
-        foreground=colors['dark'],
-        background=colors['color1'],
-        format='{HDDPercent}%',
-        device='nvme1n1',
+    widget.Clock(
+        **base(bg='color1'), 
+        format='%d/%m/%Y - %H:%M'
     ),
 
     powerline('color2', 'color1'),
@@ -190,7 +206,7 @@ secondary_widgets = [
 
     icon(bg="color3", text=' '), # Icon: nf-md-calendar
 
-    widget.Clock(**base(bg='color3'), format='%d/%m/%Y - %H:%M '),
+    widget.Clock(**base(bg='color3'), format='%d/%m/%y - %H:%M '),
 
     #powerline('color3', 'color3'),
 ]
