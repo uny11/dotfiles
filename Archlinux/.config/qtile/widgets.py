@@ -71,12 +71,13 @@ def workspaces():
 
 primary_widgets = [
 
-    # widget.Image(
-    #     filename = '/home/isaac/Wallpapers/archlinux-logo-dark-1200dpi.png',
-    #     background = 'ffffff'
-    # ),
+#    widget.TextBox(
+#        "",
+#        foreground = 'dark',
+#        background = 'color1',
+#    ),
 
-#    separator(),
+#   separator(),
 
     *workspaces(),
 
@@ -176,13 +177,13 @@ secondary_widgets = [
 
     separator(),
 
-    powerline('color1', 'dark'),
+    # powerline('color1', 'dark'),
 
-    widget.CurrentLayoutIcon(**base(bg='color1'), scale=0.65),
+    # widget.CurrentLayoutIcon(**base(bg='color1'), scale=0.65),
 
     #widget.CurrentLayout(**base(bg='color1'), padding=5),
 
-    powerline('color2', 'color1'),
+    powerline('color2', 'color2'),
 
     icon(bg="color2", text=' '), # Icon: nf-fa-volume_high
 
