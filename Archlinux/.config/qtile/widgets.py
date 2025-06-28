@@ -69,7 +69,8 @@ def workspaces():
     ]
 
 
-primary_widgets = [
+#primary_widgets = [
+secondary_widgets = [
 
 #    widget.TextBox(
 #        "",
@@ -172,7 +173,8 @@ primary_widgets = [
     
 ]
 
-secondary_widgets = [
+primary_widgets = [
+#secondary_widgets = [
     *workspaces(),
 
     separator(),
