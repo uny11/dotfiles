@@ -145,3 +145,9 @@ source /home/isaac/powerlevel10k/powerlevel10k.zsh-theme
 typeset -g POWERLEVEL9K_INSTANT_PROMPT=quiet
 
 setxkbmap es
+
+# Añadir al final del archivo
+if [ -z "$SSH_AUTH_SOCK" ]; then
+    eval "$(ssh-agent -s)" > /dev/null
+    ssh-add ~/.ssh/id_ed25519 2> /dev/null
+fi
