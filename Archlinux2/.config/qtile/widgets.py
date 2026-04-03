@@ -82,6 +82,49 @@ primary_widgets = [
 
     separator(),
 
+    # powerline('color1', 'dark'),
+
+    # icon(bg="color1", text=' '), # Icon: nf-fa-volume_high
+
+    # widget.Volume(
+    #     foreground=colors['dark'],
+    #     background=colors['color1'],
+    #     channel='Headphone',
+    # ),
+
+    # powerline('color4', 'color1'),
+
+    # icon(bg="color4", text=' '), # Icon: nf-fa-volume_high
+
+    # widget.Volume(
+    #     foreground=colors['dark'],
+    #     background=colors['color4'],
+    #     channel='Master',
+    # ),
+
+    # powerline('color3', 'dark'),
+   
+    # icon(bg="color3", text='󰿅 '), # Icon: nf-md-location_exit
+    
+    # widget.QuickExit(
+    #     foreground=colors['dark'],
+    #     background=colors['color3'],
+    #     default_text='EXIT',
+    # ),
+    
+
+    #powerline('color3', 'color3'),
+]
+
+
+secondary_widgets = [
+
+    *workspaces(),
+
+    separator(),
+
+    widget.Systray(background=colors['dark'], padding=5),
+
     powerline('color1', 'dark'),
 
     icon(bg="color1", text=' '), # Icon: nf-fa-volume_high
@@ -101,31 +144,8 @@ primary_widgets = [
         background=colors['color4'],
         channel='Master',
     ),
-
+    
     powerline('color3', 'color4'),
-   
-    icon(bg="color3", text='󰿅 '), # Icon: nf-md-location_exit
-    
-    widget.QuickExit(
-        foreground=colors['dark'],
-        background=colors['color3'],
-        default_text='EXIT',
-    ),
-    
-
-    #powerline('color3', 'color3'),
-]
-
-
-secondary_widgets = [
-
-    *workspaces(),
-
-    separator(),
-
-    widget.Systray(background=colors['dark'], padding=5),
-    
-    powerline('color3', 'dark'),
 
     # icon(bg="color3", text=' '),  # Icon: nf-fa-feed
     
@@ -199,5 +219,16 @@ secondary_widgets = [
         update_interval=1800,
         custom_command='checkupdates',
     ),
+
+    powerline('color3', 'color4'),
+   
+    icon(bg="color3", text='󰿅 '), # Icon: nf-md-location_exit
+    
+    widget.QuickExit(
+        foreground=colors['dark'],
+        background=colors['color3'],
+        default_text='EXIT',
+    ),
+    
      
 ]
