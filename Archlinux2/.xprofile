@@ -7,4 +7,5 @@ picom &
 #udiskie -t &
 conky &
 #nm-applet &
+razer-cli -b 100 -a
 
