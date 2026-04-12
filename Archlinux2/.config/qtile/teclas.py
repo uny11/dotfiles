@@ -32,7 +32,7 @@ keys = [
 
     #Apps
     Key([mod], "Return", lazy.spawn("alacritty")),
-    Key([mod], "c", lazy.spawn("code")),
+    Key([mod], "c", lazy.spawn("code --ozone-platform=x11")),
     Key([mod], "b", lazy.spawn("brave")),
 
     # Toggle between different layouts as defined below
