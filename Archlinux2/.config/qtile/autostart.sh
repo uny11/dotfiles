@@ -6,11 +6,15 @@ if [ -z "$SSH_AUTH_SOCK" ]; then
     ssh-add ~/.ssh/id_ed25519 2> /dev/null
 fi
 
-# systray volume
-volumeicon &
+# sleep 2
+# qtile cmd-obj -o cmd -f to_screen -a 1
 
-#unidades externas
-udiskie -t &
+# # systray volume
+# volumeicon &
+
+# #unidades externas
+# udiskie -t &
 
 #bloqueo de pantalla en 10min
 xautolock -time 10 -locker "betterlockscreen -l" &
+

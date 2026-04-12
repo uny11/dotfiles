@@ -12,27 +12,31 @@ from teclas import mod, keys
 from widgets import widget_defaults, extension_defaults
 
 
-@hook.subscribe.startup_once
-def autostart():
-    subprocess.call([path.join(qtile_path, 'autostart.sh')])
-
-
 # Get the icons at https://www.nerdfonts.com/cheat-sheet (you need a Nerd Font)
-# Icons: 
-# nf-fa-earth_europe,  
-# nf-fae-python, 
-# nf-dev-terminal, 
-# nf-fa-code, 
-# nf-oct-git_merge,  
-# nf-linux-libreofficebase 
-# nf-md-microsoft_visual_studio_code 󰨞
-# nf-fa-chrome 
-# nf-md-git 󰊢
-# nf-fa-youtube 
-# nf-cod-folder 
-groups = [Group(i) for i in [
-    "   ", " 󰨞  ", "   ", " 󰊢  ", "  ", "  "
-]]
+# Define los nombres de tus grupos
+nombres_grupos = ["   ", " 󰨞  ", "   ", " 󰊢  ", "  ", "  "]
+
+# Crea los grupos con screen_affinity para asignar pantallas
+groups = []
+for i, nombre in enumerate(nombres_grupos):
+    if i == 0: 
+        groups.append(Group(nombre, screen_affinity=1))
+    elif i == 1: 
+        groups.append(Group(nombre, screen_affinity=1))
+    elif i == 2: 
+        groups.append(Group(nombre, screen_affinity=1))
+    elif i == 3: 
+        groups.append(Group(nombre, screen_affinity=1))
+    elif i == 4: 
+        groups.append(Group(nombre, screen_affinity=1))
+    elif i == 5: 
+        groups.append(Group(nombre, screen_affinity=0))
+    else:
+        groups.append(Group(nombre))
+
+# groups = [Group(i) for i in [
+#     "   ", " 󰨞  ", "   ", " 󰊢  ", "  ", "  "
+# ]]
 
 for i, group in enumerate(groups):
     actual_key = str(i + 1)
@@ -43,6 +47,11 @@ for i, group in enumerate(groups):
         Key([mod, "shift"], actual_key, lazy.window.togroup(group.name))
     ])
 
+
+@hook.subscribe.startup_once
+def autostart():
+    subprocess.call([path.join(qtile_path, 'autostart.sh')])
+    qtile.to_screen(1)  #cambiar focus de pantalla 2
 
 
 layouts = [
