@@ -171,7 +171,7 @@ secondary_widgets = [
         foreground=colors['dark'],
         background=colors['color1'],
         format='{HDDPercent}%',
-        device='nvme1n1',
+        device='nvme0n1',
     ),
 
     powerline('color4', 'color1'),
